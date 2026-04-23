@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Overview - Interviw AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="skills-style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="page-header">
+        <a href="index.html" class="back-btn">← На головну</a>
+        <h1>Skills Overview</h1>
+        <p class="subtitle">Ваш поточний рівень навичок</p>
+      </header>
+
+      <div class="skills-content">
+        <div class="chart-container">
+          <canvas id="skillsRadarChart"></canvas>
+        </div>
+
+        <div class="skills-details">
+          <h3>Skills Breakdown</h3>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span>Communication</span>
+              <span class="status-good">Good</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill green" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span>Problem Solving</span>
+              <span class="status-needs">Needs Improvement</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill yellow" style="width: 50%"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span>Technical Knowledge</span>
+              <span class="status-avg">60%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill purple" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-info">
+              <span>Confidence</span>
+              <span class="status-low">Low</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-fill red" style="width: 45%"></div>
+            </div>
+          </div>
+
+          <div class="action-footer">
+            <p>Зосередьтеся на слабких сторонах для кращих результатів!</p>
+            <a href="recommendations.html" class="btn-primary"
+              >View Recommendations</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const ctx = document.getElementById("skillsRadarChart").getContext("2d");
+      new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: [
+            "Communication",
+            "Problem Solving",
+            "Technical Knowledge",
+            "Confidence",
+            "Industry Knowledge",
+          ],
+          datasets: [
+            {
+              data: [75, 50, 60, 45, 60],
+              fill: true,
+              backgroundColor: "rgba(90, 79, 243, 0.2)",
+              borderColor: "#5a4ff3",
+              pointBackgroundColor: "#5a4ff3",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "#5a4ff3",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            r: {
+              angleLines: { color: "#1e1e26" },
+              grid: { color: "#1e1e26" },
+              pointLabels: { color: "#a0a0ab", font: { size: 12 } },
+              ticks: { display: false },
+              suggestedMin: 0,
+              suggestedMax: 100,
+            },
+          },
+          plugins: { legend: { display: false } },
+        },
+      });
+    </script>
+  </body>
+</html>

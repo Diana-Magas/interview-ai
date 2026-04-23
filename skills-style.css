@@ -1,0 +1,48 @@
+.skills-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.skills-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skill-row {
+    margin-bottom: 25px;
+}
+
+.action-footer {
+    margin-top: auto;
+    /* Штовхає футер до низу */
+    padding-top: 30px;
+    border-top: 1px solid #1e1e26;
+}
+
+.action-footer p {
+    color: #a0a0ab;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background: #5a4ff3;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #473dc2;
+    transform: translateY(-2px);
+}

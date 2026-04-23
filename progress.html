@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Progress - Interviw AI</title>
+    <link rel="stylesheet" href="progress-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="progress-container">
+      <header class="progress-header">
+        <div class="title-group">
+          <a href="index.html" class="back-link">← Back to Home</a>
+          <h1>Your Progress</h1>
+          <p class="subtitle">Track your improvement over time</p>
+        </div>
+        <div class="header-controls">
+          <select class="dropdown">
+            <option>All Roles</option>
+          </select>
+          <select class="dropdown">
+            <option>Last 30 Days</option>
+          </select>
+        </div>
+      </header>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="label">Sessions</span>
+          <div class="value-row">
+            <span class="value">24</span>
+            <span class="trend pos">+12%</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="label">Average Score</span>
+          <div class="value-row">
+            <span class="value">72%</span>
+            <span class="trend pos">+10%</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="label">Questions Answered</span>
+          <div class="value-row">
+            <span class="value">156</span>
+            <span class="trend pos">+8%</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="label">Skills Improved</span>
+          <div class="value-row">
+            <span class="value">5</span>
+            <span class="trend pos">+2%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <canvas id="progressChart"></canvas>
+      </div>
+    </div>
+
+    <script src="progress-script.js"></script>
+  </body>
+</html>

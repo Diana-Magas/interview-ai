@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Session - Intervue AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="interview-style.css" />
+  </head>
+  <body>
+    <div class="interview-container">
+      <header class="session-header">
+        <div class="session-info">
+          <a href="index.html" class="exit-btn">← Quit</a>
+          <span class="session-title">Frontend Developer Interview</span>
+        </div>
+        <div class="progress-wrapper">
+          <div class="progress-text">Question 3 of 10</div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 30%"></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="question-box">
+        <div class="question-badge">Technical Question</div>
+        <h2>What is the difference between == and === in JavaScript?</h2>
+        <p class="hint">
+          Take a moment to think and type your answer below. Be specific!
+        </p>
+
+        <textarea
+          placeholder="Type your answer here..."
+          class="answer-input"
+        ></textarea>
+
+        <div class="timer-container">
+          <svg viewBox="0 0 100 100" class="timer-svg">
+            <circle cx="50" cy="50" r="45" class="timer-path"></circle>
+            <circle cx="50" cy="50" r="45" class="timer-fill"></circle>
+          </svg>
+          <div class="timer-text">02:45</div>
+        </div>
+
+        <div class="tips-accordion">
+          <details>
+            <summary>Tips</summary>
+            <p>
+              Think about type coercion and how these operators handle different
+              data types.
+            </p>
+          </details>
+        </div>
+      </main>
+
+      <footer class="session-footer">
+        <button class="btn-ghost">Previous</button>
+        <a href="analysis.html" class="btn-primary">Next Question</a>
+      </footer>
+    </div>
+  </body>
+</html>

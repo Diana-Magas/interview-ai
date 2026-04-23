@@ -1,0 +1,251 @@
+:root {
+    --bg-dark: #0a0a0f;
+    --card-bg: #12121a;
+    --primary: #5a4ff3;
+    --primary-soft: rgba(90, 79, 243, 0.2);
+    --border: #1e1e26;
+    --text-main: #ffffff;
+    --text-dim: #a0a0ab;
+    --timer-blue: #4fd1f3;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.interview-container {
+    width: 90%;
+    max-width: 900px;
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Header & Navigation */
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.session-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.exit-btn {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.exit-btn:hover {
+    color: #f34f4f;
+}
+
+.session-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Progress Bar */
+.progress-wrapper {
+    width: 200px;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+.progress-bar-bg {
+    height: 6px;
+    background: #1e1e26;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Question Section */
+.question-box {
+    margin-bottom: 30px;
+}
+
+.question-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hint {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.answer-input {
+    width: 100%;
+    height: 220px;
+    background: #0a0a0f;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(90, 79, 243, 0.1);
+}
+
+/* Timer */
+.timer-container {
+    position: absolute;
+    right: 40px;
+    bottom: 120px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.timer-path {
+    fill: none;
+    stroke: #1e1e26;
+    stroke-width: 4;
+}
+
+.timer-fill {
+    fill: none;
+    stroke: var(--timer-blue);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 70;
+    /* Це значення можна анімувати через JS */
+}
+
+.timer-text {
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Tips Accordion */
+.tips-accordion {
+    margin-top: 20px;
+}
+
+details {
+    background: #16161e;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+summary {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-dim);
+    user-select: none;
+}
+
+details p {
+    padding: 0 20px 20px;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+/* Footer Controls */
+.session-footer {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+    background: #1a1a25;
+    color: white;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #4a3ee2;
+    transform: translateY(-2px);
+}
