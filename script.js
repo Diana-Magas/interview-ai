@@ -22,11 +22,41 @@ document.addEventListener('DOMContentLoaded', () => {
     this.style.opacity = '0.8';
 });
 });
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
+const openBtn = document.getElementById('openDemoBtn');
+const modal = document.getElementById('videoModal');
+const closeBtn = document.getElementById('closeModalBtn');
+const video = document.getElementById('demoVideo');
+
+openBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+    video.play();
+    document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    video.pause();
+    video.currentTime = 0;
+    document.body.style.overflow = 'auto';
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeBtn.click();
+    }
+});
+const burger = document.getElementById('burgerMenu');
+const nav = document.getElementById('navContainer');
 
 burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    nav.classList.toggle('active');
+    burger.classList.toggle('active'); 
+});
 
-    burger.classList.toggle('toggle');
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+    });
 });
