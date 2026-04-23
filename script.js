@@ -22,3 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     this.style.opacity = '0.8';
 });
 });
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    burger.classList.toggle('toggle');
+});
