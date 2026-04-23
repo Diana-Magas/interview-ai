@@ -155,8 +155,17 @@
     color: #a0a0ab;
     font-size: 0.9rem;
 }
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-/* Мобільна версія */
+.btn-google svg {
+    flex-shrink: 0;
+}
+
 @media (max-width: 480px) {
     .auth-card {
         padding: 30px 20px;
