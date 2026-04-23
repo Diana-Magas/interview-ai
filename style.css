@@ -385,152 +385,136 @@ h1 {
     height: 60px;
     margin-top: 20px;
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
+
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    background: #12121a;
-    border-bottom: 1px solid #1e1e26;
 }
 
-.logo {
+.video-modal.active {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    white-space: nowrap;
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    color: #a0a0ab;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.2s;
-    white-space: nowrap;
-}
-
-.nav-links a:hover {
-    color: #5a4ff3;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .nav-scroll-container {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 5px;
-    }
-
-    .nav-scroll-container::-webkit-scrollbar {
-        display: none;
-    }
-
-    .nav-links {
-        gap: 20px;
-        padding: 0 10px;
-    }
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #12121a;
-    border-bottom: 1px solid #1e1e26;
+.modal-content {
     position: relative;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#demoVideo {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 1;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #0a0a0f;
+    border-bottom: 1px solid #1e1e26;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-.logo {
+.nav-right {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.1rem;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .nav-links {
     display: flex;
     gap: 25px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.nav-links a {
-    color: #a0a0ab;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.nav-links a:hover {
-    color: #5a4ff3;
-}
-
+/* Бургер прихований на десктопі */
 .burger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .burger span {
-    width: 25px;
+    width: 28px;
     height: 2px;
     background: white;
     transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+/* Мобільна версія */
+@media (max-width: 992px) {
     .burger {
         display: flex;
     }
 
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
         width: 100%;
-        background: #12121a;
+        height: 100vh;
+        background: #0a0a0f;
         flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        border-bottom: 0px solid #1e1e26;
+        justify-content: center;
+        gap: 50px;
+        transition: 0.4s ease;
     }
 
-    .nav-links.active {
-        max-height: 400px;
-        border-bottom: 1px solid #1e1e26;
+    .nav-container.active {
+        right: 0;
     }
 
-    .nav-links li {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-auth {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .btn-signup,
+    .login-link {
         width: 100%;
         text-align: center;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 20px;
-        border-top: 1px solid #1e1e26;
-        width: 100%;
     }
 }
