@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Results - Frontend Developer</title>
+    <link rel="stylesheet" href="dashboard-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="title-section">
+          <h1>Frontend Developer Interview</h1>
+          <p class="date">May 30, 2024 at 2:30 PM</p>
+        </div>
+        <div class="header-buttons">
+          <button
+            class="btn-secondary"
+            onclick="window.location.href = 'index.html'"
+          >
+            Home
+          </button>
+          <button
+            class="btn-retake"
+            onclick="window.location.href = 'interview.html'"
+          >
+            Retake Session
+          </button>
+        </div>
+      </header>
+
+      <div class="main-stats">
+        <div class="card score-card">
+          <div class="chart-container">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path
+                class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path
+                class="circle"
+                stroke-dasharray="85, 100"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" class="percentage">85%</text>
+            </svg>
+          </div>
+          <div class="score-info">
+            <h2>Overall Score</h2>
+            <p class="status">Great Performance! 🔥</p>
+            <p class="comparison">
+              You performed better than 82% of other users
+            </p>
+          </div>
+        </div>
+
+        <div class="card info-grid">
+          <div class="info-item">
+            <span class="label">Total Questions</span>
+            <span class="value blue">10</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Time Taken</span>
+            <span class="value blue">18:45</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Correct Answers</span>
+            <span class="value blue">0/10</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Average Time</span>
+            <span class="value blue">01:52</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active">Performance Overview</button>
+        <button class="tab">Question Review</button>
+      </div>
+
+      <div class="details-section">
+        <div class="category-scores">
+          <h3>Performance by Category</h3>
+          <div class="bar-item">
+            <div class="bar-header">
+              <span>Technical Accuracy</span><span>80%</span>
+            </div>
+            <div class="progress">
+              <div class="fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-header"><span>Clarity</span><span>85%</span></div>
+            <div class="progress">
+              <div class="fill" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-header">
+              <span>Completeness</span><span>80%</span>
+            </div>
+            <div class="progress">
+              <div class="fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-header">
+              <span>Best Practices</span><span>85%</span>
+            </div>
+            <div class="progress">
+              <div class="fill" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analysis">
+          <div class="strengths">
+            <h4>Strengths</h4>
+            <ul>
+              <li>Good technical knowledge</li>
+              <li>Clear explanations</li>
+              <li>Strong problem-solving approach</li>
+            </ul>
+          </div>
+          <div class="improvements">
+            <h4>Areas to Improve</h4>
+            <ul>
+              <li>Add more examples</li>
+              <li>Improve answer structure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
