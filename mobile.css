@@ -1,0 +1,61 @@
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container, .dashboard-container, .interview-container, .progress-container {
+        padding: 20px 15px;
+        margin: 10px auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header, .progress-header, .session-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-controls, .header-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.2rem; }
+
+    .stats-grid, .main-stats, .analysis-grid, .recom-grid, .skills-content {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    .stat-card, .recom-card {
+        padding: 15px;
+    }
+
+
+    .answer-input {
+        height: 150px;
+    }
+
+    .timer-container {
+        position: static; 
+        margin: 20px auto;
+        width: 80px;
+        height: 80px;
+    }
+
+    .session-footer {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .btn-primary, .btn-ghost, .btn-retake {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chart-section, .chart-container {
+        height: 250px !important;
+    }
+}
