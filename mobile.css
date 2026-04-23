@@ -1,61 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
     }
 
-    .container, .dashboard-container, .interview-container, .progress-container {
-        padding: 20px 15px;
-        margin: 10px auto;
-        width: 100%;
-        box-sizing: border-box;
+    .container, 
+    .dashboard-container, 
+    .interview-container, 
+    .progress-container,
+    .insights-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
     }
 
-    .header, .progress-header, .session-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .main-stats, 
+    .stats-grid, 
+    .analysis-grid, 
+    .recom-grid, 
+    .info-grid,
+    .skills-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
 
-    .header-controls, .header-buttons {
-        width: 100%;
-        flex-direction: column;
+    .header, 
+    .progress-header, 
+    .session-header,
+    .page-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+        text-align: left !important;
     }
 
-    h1 { font-size: 1.4rem; }
-    h2 { font-size: 1.2rem; }
-
-    .stats-grid, .main-stats, .analysis-grid, .recom-grid, .skills-content {
-        grid-template-columns: 1fr !important;
-        gap: 15px;
+    .header-controls, 
+    .header-buttons, 
+    .session-info {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
     }
 
-    .stat-card, .recom-card {
-        padding: 15px;
+    .btn-primary, 
+    .btn-ghost, 
+    .btn-retake, 
+    .btn-secondary,
+    .exit-btn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 14px !important;
     }
 
+    .score-banner {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+    }
+
+    .score-number {
+        font-size: 2.5rem !important;
+    }
 
     .answer-input {
-        height: 150px;
+        height: 180px !important;
+        font-size: 16px !important; 
     }
 
     .timer-container {
-        position: static; 
-        margin: 20px auto;
-        width: 80px;
-        height: 80px;
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 20px auto !important;
     }
 
-    .session-footer {
-        flex-direction: column-reverse;
-        gap: 10px;
+    .chart-section, 
+    .chart-container,
+    canvas {
+        width: 100% !important;
+        height: 280px !important;
     }
 
-    .btn-primary, .btn-ghost, .btn-retake {
-        width: 100%;
-        text-align: center;
+    .recom-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
     }
 
-    .chart-section, .chart-container {
-        height: 250px !important;
+    .recom-icon {
+        font-size: 2rem !important;
+    }
+
+    .pro-tip-card {
+        margin-top: 20px !important;
+    }
+
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        padding: 15px !important;
+        font-size: 1rem !important;
+    }
+    
+    .percentage {
+        font-size: 0.5rem !important;
     }
 }
