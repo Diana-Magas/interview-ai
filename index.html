@@ -16,22 +16,29 @@
         <img src="logo.jpg" alt="Intervue AI Logo" />
         <span>Interview <span class="ai-text">AI</span></span>
       </div>
-    </div>
-   <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="progress.html">Analytics</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="dashboard.html">Results</a></li>
-    </ul>
-        <a href="#" class="login-link">Login</a>
-        <button class="btn-signup">Sign Up</button>
+
+      <div class="nav-right">
+        <div class="nav-container" id="navContainer">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="dashboard.html">Results</a></li>
+            <li><a href="progress.html">Analytics</a></li>
+            <li><a href="skills.html">Skills</a></li>
+          </ul>
+
+          <div class="nav-auth">
+            <a href="login.html" class="login-link">Login</a>
+            <a href="signup.html" class="btn-signup">Sign Up</a>
+          </div>
+        </div>
+
+        <div class="burger" id="burgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <main class="hero">
@@ -45,7 +52,7 @@
 
         <div class="hero-btns">
           <a href="interview.html" class="btn-primary">Start Free Practice</a>
-          <button class="btn-secondary">
+          <button class="btn-secondary" id="openDemoBtn">
             <span class="play-icon">▶</span> Watch Demo
           </button>
         </div>
@@ -79,6 +86,15 @@
         </div>
       </div>
     </main>
+
+    <div class="video-modal" id="videoModal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+        <video id="demoVideo" controls playsinline>
+          <source src="demo.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
     <section class="stats">
       <div class="stat-item">
